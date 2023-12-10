@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@500&display=swap');
+
+* {
+    // margin: 0;
+    font-family: 'Ibarra Real Nova', serif !important;
+}
+
+.booking_confirmation{
+    padding:4rem;
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    justify-content: center;
+    background-color: #F4EBD0;
+    background-color: #809FB0;
+    background-color: #F1F0E0;
+    background-color: #E0D7C7;
+    background-color: #DBDAC5;
+}
+
+h1{
+    font-family: 'Sarabun', sans-serif !important;
+    font-size: 2.2rem;
+    font-weight:900;
+    color: #284d79;
+}
+
+h2{
+    font-weight: 500;
+    font-family: Quintessential !important;
+    font-size: 1.5rem;
+}
+
+.back-btn{
+    margin: 1rem;
+}
+
+.form-container{
+    display:flex;
+    flex-direction: column;
+    border: none;
+}
+
+form{
+    width: 50%;
+    // margin:auto
+}
+
+.actions button{
+    margin-right:10px;
+}
+
+tr,th,td{
+    padding:.5rem
+}
+
+table{
+    width:50%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+
+mat-spinner{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    animation: spin 2s linear infinite;
+    }
+      
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }

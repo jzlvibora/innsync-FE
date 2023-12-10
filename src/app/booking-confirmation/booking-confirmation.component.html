@@ -1,0 +1,64 @@
+<div class="booking_confirmation">
+    <h1>Booking Confirmation</h1>
+    <h2>Booking Details</h2>
+    <h3>Check-in: {{checkInDate}}</h3>
+    <h3>Check-out: {{checkOutDate}}</h3>
+    <h2>Price Breakdown</h2>
+    <table>
+        <tr>
+          <!-- <th>Quantity</th> -->
+          <th>Room</th>
+          <th>Price</th>
+        </tr>
+        <tr>
+          <!-- <td>1</td> -->
+          <td>{{room?.roomNumber}}</td>
+          <td>{{room?.price}}</td>
+        </tr>
+        <tr>
+            <td >Total</td>
+            
+            <td>{{room?.price}}</td>
+          </tr>
+    </table> 
+
+
+        <form [formGroup]="form" (ngSubmit)="onContinue()">
+    <mat-card  class="form-container">
+        <h2>Your Information</h2>
+        <mat-form-field >
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email">
+            <!-- <mat-error *ngIf="form.get('title')?.invalid && (form.get('title')?.dirty || form.get('title')?.touched) && form.get('title')?.errors?.['required']">
+                Title is required
+            </mat-error> -->
+        </mat-form-field>
+
+<mat-form-field >
+    <mat-label>Phone</mat-label>
+    <input matInput formControlName="phone">
+    <!-- <mat-error *ngIf="form.get('title')?.invalid && (form.get('title')?.dirty || form.get('title')?.touched) && form.get('title')?.errors?.['required']">
+        Title is required
+    </mat-error> -->
+</mat-form-field>
+
+<mat-form-field >
+    <mat-label>Notes</mat-label>
+    <textarea matInput placeholder="Ex. It makes me feel..." rows="5" formControlName="notes"></textarea>
+    <!-- <mat-error *ngIf="form.get('body')?.invalid && (form.get('body')?.dirty || form.get('body')?.touched) && form.get('body')?.errors?.['required']">
+        Body is required
+    </mat-error> -->
+</mat-form-field>
+
+
+<div class="actions">
+    <button  mat-raised-button color="primary"> Continue </button>
+    <button  mat-raised-button color="accent" type="button"> Cancel </button>
+</div>
+</mat-card>
+</form>
+</div>
+<!-- <mat-spinner *ngIf="isLoading"></mat-spinner> -->
+
+
+  

@@ -10,12 +10,17 @@ import { MatButtonModule } from '@angular/material/button';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatNativeDateModule} from '@angular/material/core';
+import {MatNativeDateModule, MatOptionModule} from '@angular/material/core';
 import {MatCardModule} from '@angular/material/card';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SearchResultsComponent } from './search-results/search-results.component';
+import { BookingConfirmationComponent } from './booking-confirmation/booking-confirmation.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner'; 
+import {MatTableModule} from '@angular/material/table';
 
 
 @NgModule({
@@ -24,7 +29,8 @@ import { SearchResultsComponent } from './search-results/search-results.componen
     NavbarComponent,
     HomeComponent,
     HeaderComponent,
-    SearchResultsComponent
+    SearchResultsComponent,
+    BookingConfirmationComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +43,19 @@ import { SearchResultsComponent } from './search-results/search-results.componen
     MatDatepickerModule, 
     MatNativeDateModule,
     MatCardModule,
-    HttpClientModule
+    CommonModule,
+    MatCardModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatCardModule,
+    MatProgressSpinnerModule,
+    MatOptionModule,
+    MatTableModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
 
   ],
   providers: [],
