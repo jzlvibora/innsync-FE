@@ -15,7 +15,7 @@
           </p>
         </mat-card-content>
         <mat-card-actions>
-          <button mat-raised-button color="primary">Book Now for Php{{room?.price}}</button>
+          <button mat-raised-button color="primary" (click)="onSelectRoom(room.roomId)">Book Now for Php{{room?.price}}</button>
         </mat-card-actions>
       </mat-card>      
 </div>

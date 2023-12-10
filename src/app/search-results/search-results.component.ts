@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Route } from '@angular/router';
+import { ActivatedRoute, Route, Router } from '@angular/router';
 import { Room } from '../shared/room';
 import { RoomService } from '../services/room/room.service';
 
@@ -13,7 +13,7 @@ export class SearchResultsComponent implements OnInit{
   checkOutDate!:string;
   rooms!: Room[];
 
-  constructor(private route:ActivatedRoute, private roomService:RoomService ){}
+  constructor(private route:ActivatedRoute, private roomService:RoomService,private router:Router){}
 
   ngOnInit(): void {
     this.route.queryParams.subscribe((params)=>{
@@ -24,8 +24,18 @@ export class SearchResultsComponent implements OnInit{
     this.roomService.getAvailableRooms(this.checkInDate,this.checkOutDate).subscribe((res)=>{
       this.rooms=res;
     })
+  }
 
-
+  onSelectRoom(roomId:number){
+    this.router.navigate(['bookingconfirmation/'],
+    {
+      queryParams:{
+        id:roomId,
+        checkInDate: this.checkInDate,
+        checkOutDate:this.checkOutDate
+      }
+    },
+    )
   }
   
 
