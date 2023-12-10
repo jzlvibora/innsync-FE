@@ -1,0 +1,21 @@
+<h1>Search Results</h1>
+<p>Check-in Date: {{ checkInDate }}</p>
+<p>Check-out Date: {{ checkOutDate }}</p>
+
+<div class="content">
+    <mat-card class="example-card" *ngFor="let room of rooms">
+        <mat-card-header>
+          <mat-card-title>{{room?.roomNumber}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <p>
+           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod veniam voluptatum dolores. Voluptas quaerat possimus quibusdam accusamus sint, fuga, assumenda a fugiat quos adipisci deleniti pariatur voluptate ab cum corporis!
+           Veritatis non, possimus debitis amet officia pariatur itaque hic? Ratione earum, excepturi nesciunt, consectetur omnis officiis provident numquam debitis autem unde perferendis neque cumque, ipsum error tempora commodi quisquam tempore?
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="primary">Book Now for Php{{room?.price}}</button>
+        </mat-card-actions>
+      </mat-card>      
+</div>
