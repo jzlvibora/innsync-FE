@@ -15,6 +15,7 @@ import {MatCardModule} from '@angular/material/card';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SearchResultsComponent } from './search-results/search-results.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    HeaderComponent
+    HeaderComponent,
+    SearchResultsComponent
   ],
   imports: [
     BrowserModule,
