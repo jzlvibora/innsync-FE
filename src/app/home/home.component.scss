@@ -12,5 +12,10 @@
     display: flex;
     padding: 3rem;
     justify-content: center;
- 
+    flex-wrap: wrap;
+  }
+
+  mat-card-content .description{
+    display:flex;
+    justify-content: center;
   }
