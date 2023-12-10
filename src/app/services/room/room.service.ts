@@ -11,10 +11,20 @@ export class RoomService {
   BASE_URL = environment.apiUrl;
 
   constructor(private http:HttpClient) { }
+
+  public getRoom(id:number):Observable<Room>{
+    const params = {
+      id:id
+    }
+    return this.http.get<Room>(
+      this.BASE_URL + 'rooms/' + id,
+      // {params}
+    )
+  }
   
   public getAllRooms():Observable<Room[]>{
     return this.http.get<Room[]>(
-      this.BASE_URL + 'rooms'
+      this.BASE_URL + 'rooms/ourRooms'
     )
   }
 
