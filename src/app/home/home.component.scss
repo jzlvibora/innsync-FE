@@ -68,3 +68,16 @@ mat-form-field input mat-datepicker{
     padding: 1.3rem 1rem;
     font-size: 1rem
   }
+
+  mat-card{
+    transition:.1s linear
+  }
+
+  mat-card:hover{
+    transform: scale(1.01)
+    
+  }
+
+  mat-card-title{
+    font-family: 'Sarabun', sans-serif !important;
+  }
