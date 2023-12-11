@@ -27,6 +27,13 @@
     <mat-card  class="form-container">
         <h2>Your Information</h2>
         <mat-form-field >
+            <mat-label>Guest Name</mat-label>
+            <input matInput formControlName="guest">
+            <!-- <mat-error *ngIf="form.get('title')?.invalid && (form.get('title')?.dirty || form.get('title')?.touched) && form.get('title')?.errors?.['required']">
+                Title is required
+            </mat-error> -->
+        </mat-form-field>
+        <mat-form-field >
             <mat-label>Email</mat-label>
             <input matInput formControlName="email">
             <!-- <mat-error *ngIf="form.get('title')?.invalid && (form.get('title')?.dirty || form.get('title')?.touched) && form.get('title')?.errors?.['required']">
@@ -52,7 +59,7 @@
 
 
 <div class="actions">
-    <button  mat-raised-button color="primary"> Continue </button>
+    <button  mat-raised-button color="primary" (click)="onContinue()"> Checkout </button>
     <button  mat-raised-button color="accent" type="button"> Cancel </button>
 </div>
 </mat-card>

@@ -41,10 +41,7 @@ export class BookingConfirmationComponent implements OnInit{
 
   private buildForm():FormGroup{
     return new FormGroup({
-      roomNumber: new FormControl({value: this.room?.roomNumber, disabled: true} ),
-      checkinDate: new FormControl({value:this.checkInDate, disabled:true}),
-      checkoutDate: new FormControl({value:this.checkOutDate, disabled:true}),
-      price: new FormControl({value:this.room?.price, disabled:true}),
+      guest: new FormControl(null,[Validators.required]),
       email: new FormControl(null,[Validators.required]),
       phone:new FormControl(null,[Validators.required]),
       notes: new FormControl(null, [Validators.required])
@@ -53,7 +50,19 @@ export class BookingConfirmationComponent implements OnInit{
 
 
   onContinue(){
-    console.log('continue')
+    const form = this.form.controls;
+    const data:any = {
+      checkIin: this.checkInDate,
+      checkOut: this.checkOutDate,
+      room:this.room.roomNumber,
+      guest:form['guest'].value,
+      email:form['email'].value,
+      phone:form['phone'].value,
+      notes:form['notes'].value
+
+    }
+
+    console.log(data)
   }
 
 
