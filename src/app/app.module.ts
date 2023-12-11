@@ -23,6 +23,7 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatTableModule} from '@angular/material/table';
 import {MatIconModule} from '@angular/material/icon';
 import { FooterComponent } from './footer/footer.component';
+import { BillingComponent } from './billing/billing.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { FooterComponent } from './footer/footer.component';
     HeaderComponent,
     SearchResultsComponent,
     BookingConfirmationComponent,
-    FooterComponent
+    FooterComponent,
+    BillingComponent
   ],
   imports: [
     BrowserModule,

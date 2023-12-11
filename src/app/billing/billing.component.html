@@ -1,0 +1,63 @@
+<div class="billing_details">
+    <h1>Billing Details</h1>
+    <h2>Reservation</h2>
+    <table>
+        <tr>
+          <th width="70%">Product</th>
+          <th>SubTotal</th>
+        </tr>
+        <tr>
+          <td>{{bookingDetails?.room}}</td>
+          <td>{{bookingDetails?.subTotal}}</td>
+        </tr>
+        <tr>
+          <td >SubTotal</td>
+          <td>{{bookingDetails?.subTotal}}</td>
+        </tr>
+        <tr>
+          <td>Tax</td>
+          <td>Php 0</td>
+        </tr>
+        <tr>
+          <td >Total</td>
+          <td>{{bookingDetails?.total}}</td>
+        </tr>
+    </table> 
+
+
+        <form [formGroup]="form" (ngSubmit)="onPlaceOrder()">
+    <mat-card  class="form-container">
+        <h2>Payment</h2>
+        <mat-form-field >
+            <mat-label>Card Number</mat-label>
+            <input matInput formControlName="cardNum">
+            <!-- <mat-error *ngIf="form.get('title')?.invalid && (form.get('title')?.dirty || form.get('title')?.touched) && form.get('title')?.errors?.['required']">
+                Title is required
+            </mat-error> -->
+        </mat-form-field>
+        <mat-form-field >
+            <mat-label>Expiry Date</mat-label>
+            <input matInput formControlName="expiryDate">
+            <!-- <mat-error *ngIf="form.get('title')?.invalid && (form.get('title')?.dirty || form.get('title')?.touched) && form.get('title')?.errors?.['required']">
+                Title is required
+            </mat-error> -->
+        </mat-form-field>
+
+<mat-form-field >
+    <mat-label>Card Code</mat-label>
+    <input matInput formControlName="cvc">
+    <!-- <mat-error *ngIf="form.get('title')?.invalid && (form.get('title')?.dirty || form.get('title')?.touched) && form.get('title')?.errors?.['required']">
+        Title is required
+    </mat-error> -->
+</mat-form-field>
+<div class="actions">
+    <button  mat-raised-button color="primary" (click)="onPlaceOrder()"> Place order </button>
+    <button  mat-raised-button color="accent" type="button"> Cancel </button>
+</div>
+</mat-card>
+</form>
+</div>
+<!-- <mat-spinner *ngIf="isLoading"></mat-spinner> -->
+
+
+  
