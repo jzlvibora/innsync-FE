@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Room } from '../shared/room';
-import { ActivatedRoute, Params, Route } from '@angular/router';
+import { ActivatedRoute, Params, Route, Router } from '@angular/router';
 import { RoomService } from '../services/room/room.service';
+import { BookingDataService } from '../services/booking-data/booking-data.service';
 
 @Component({
   selector: 'app-booking-confirmation',
@@ -18,7 +19,7 @@ export class BookingConfirmationComponent implements OnInit{
   error!:string | null;
   isLoading!:boolean 
 
-  constructor(private route:ActivatedRoute, private roomService:RoomService){}
+  constructor(private route:ActivatedRoute, private roomService:RoomService, private bookingDataService:BookingDataService, private router:Router){}
 
   ngOnInit(): void {
     this.route.queryParams.subscribe((params)=>{
@@ -59,8 +60,13 @@ export class BookingConfirmationComponent implements OnInit{
       email:form['email'].value,
       phone:form['phone'].value,
       notes:form['notes'].value
-
     }
+
+    this.bookingDataService.setBookingDetails(data);
+    this.router.navigate(['/billing'])
+    
+
+
 
     console.log(data)
   }
