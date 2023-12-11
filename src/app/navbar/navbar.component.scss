@@ -1,0 +1,19 @@
+*{
+    color:white !important;
+    font-family: 'Sarabun', sans-serif !important;
+}
+
+span{
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+mat-toolbar{
+    height:9%;
+    display: flex;
+    justify-content: space-around;
+}
+
+a{
+    margin-right: 2rem;
+}
