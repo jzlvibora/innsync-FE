@@ -14,6 +14,30 @@ h1{
   font-family: 'Beth Ellen', cursive;
   font-size: 2rem;
 }
+
+.availability_search_form{
+  width:35%;
+  // border:2px solid purple;
+  margin:auto;
+  padding:2rem;
+  display:flex;
+  justify-content: space-between;
+  // align-items: center;
+  margin-top: -5rem;
+  // margin-bottom: -5rem;\
+  // translate: -50 50 30 30;
+  // background-color: white;
+  z-index: 100;
+}
+
+mat-form-field input mat-datepicker{
+  background-color: white;
+}
+
+.availability_search_form button{
+  height: 2rem
+}
+
 .example-card {
     max-width: 650px;
     margin:2rem
@@ -29,9 +53,18 @@ h1{
     padding: 3rem;
     justify-content: center;
     flex-wrap: wrap;
+    background-color: aliceblue;
+    // border: 2px solid red;
+    margin-top: -5rem;
+   
   }
 
   mat-card-content .description{
     display:flex;
     justify-content: center;
+  }
+
+  button{
+    padding: 1.3rem 1rem;
+    font-size: 1rem
   }
