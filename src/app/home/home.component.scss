@@ -1,3 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Beth+Ellen&display=swap');
+
+header{
+  background-image: url('../../assets/images/hero.jpeg');
+  height:55%;
+  background-size: cover;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1{
+  text-align: center;
+  font-family: 'Beth Ellen', cursive;
+  font-size: 2rem;
+}
 .example-card {
     max-width: 650px;
     margin:2rem
