@@ -23,21 +23,20 @@
 
 <!-- All Rooms list -->
 <div class="content">
-    <mat-card class="example-card" *ngFor="let room of rooms">
+    <mat-card class="example-card" *ngFor="let roomType of roomTypes">
         <mat-card-header>
           <!-- <div mat-card-avatar class="example-header-image"></div> -->
-          <mat-card-title>{{room?.roomNumber}}</mat-card-title>
+          <mat-card-title>{{roomType.name}}</mat-card-title>
           <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
         </mat-card-header>
-        <img mat-card-image src="https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Photo of a Shiba Inu">
+        <img mat-card-image src={{roomType.imageUrl}} alt="Photo of room" height="420px">
         <mat-card-content>
           <p>
-           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod veniam voluptatum dolores. Voluptas quaerat possimus quibusdam accusamus sint, fuga, assumenda a fugiat quos adipisci deleniti pariatur voluptate ab cum corporis!
-           Veritatis non, possimus debitis amet officia pariatur itaque hic? Ratione earum, excepturi nesciunt, consectetur omnis officiis provident numquam debitis autem unde perferendis neque cumque, ipsum error tempora commodi quisquam tempore?
+           {{roomType.description}}
           </p>
         </mat-card-content>
         <mat-card-actions>
-          <button mat-raised-button color="primary">Book Now for Php{{room?.price}}</button>
+          <button mat-raised-button color="primary">Book Now</button>
         </mat-card-actions>
       </mat-card>      
 </div>

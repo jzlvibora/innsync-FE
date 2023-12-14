@@ -3,6 +3,8 @@ import { Room } from '../shared/room';
 import { RoomService } from '../services/room/room.service';
 import { NavigationExtras, Router } from '@angular/router';
 import { DatePipe } from '@angular/common';
+import { RoomtypeService } from '../services/roomtype/roomtype.service';
+import { RoomType } from '../shared/roomtypes';
 
 @Component({
   selector: 'app-home',
@@ -11,12 +13,13 @@ import { DatePipe } from '@angular/common';
 })
 export class HomeComponent implements OnInit{
   rooms!:Room[];
-  constructor(private roomService:RoomService, private router:Router, private datePipe:DatePipe){}
+  roomTypes!:RoomType[];
+  constructor(private roomService:RoomService, private roomTypeService:RoomtypeService, private router:Router, private datePipe:DatePipe){}
 
   ngOnInit(): void {
     // throw new Error('Method not implemented.');
-    this.roomService.getAllRooms().subscribe((res)=>{
-      this.rooms=res;
+    this.roomTypeService.getAllRoomTypes().subscribe((res)=>{
+      this.roomTypes=res;
     });
   }
 
