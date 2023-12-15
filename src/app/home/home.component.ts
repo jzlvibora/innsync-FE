@@ -31,9 +31,18 @@ export class HomeComponent implements OnInit{
         check_out_date:this.datePipe.transform(new Date(checkOutDate), 'yyyy-MM-dd')
       }
     },
-    
     )
-
   }
+
+  navigateToRoomsByTypeResults(roomType:string){
+    this.router.navigate([`/search-results/type`],
+    {
+      queryParams:{
+        roomType:roomType
+      }
+      }
+    )
+  }
+
 
 }
