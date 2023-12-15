@@ -24,6 +24,7 @@ import {MatTableModule} from '@angular/material/table';
 import {MatIconModule} from '@angular/material/icon';
 import { FooterComponent } from './footer/footer.component';
 import { BillingComponent } from './billing/billing.component';
+import { SearchResultsRoomtypeComponent } from './search-results-roomtype/search-results-roomtype.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { BillingComponent } from './billing/billing.component';
     SearchResultsComponent,
     BookingConfirmationComponent,
     FooterComponent,
-    BillingComponent
+    BillingComponent,
+    SearchResultsRoomtypeComponent
   ],
   imports: [
     BrowserModule,
