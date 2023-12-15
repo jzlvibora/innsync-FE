@@ -18,7 +18,7 @@ export class SearchResultsComponent implements OnInit{
   ngOnInit(): void {
     this.route.queryParams.subscribe((params)=>{
       this.checkInDate=params['check_in_date'];
-      this.checkOutDate=params['check_in_date'];
+      this.checkOutDate=params['check_out_date'];
     })
 
     this.roomService.getAvailableRooms(this.checkInDate,this.checkOutDate).subscribe((res)=>{

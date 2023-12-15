@@ -38,4 +38,10 @@ export class RoomService {
       {params}
     )
   }
+
+  public getRoomsByType(roomType:string):Observable<Room[]>{
+    return this.http.get<Room[]>(
+      this.BASE_URL + `rooms/roomtype/${roomType}`
+    )
+  }
 }

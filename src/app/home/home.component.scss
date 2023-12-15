@@ -1,3 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Beth+Ellen&display=swap');
+
+header{
+  background-image: url('../../assets/images/hero.jpeg');
+  height:55%;
+  background-size: cover;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1{
+  text-align: center;
+  font-family: 'Beth Ellen', cursive;
+  font-size: 2rem;
+}
+
+.availability_search_form{
+  width:35%;
+  // border:2px solid purple;
+  margin:auto;
+  padding:2rem;
+  display:flex;
+  justify-content: space-between;
+  // align-items: center;
+  margin-top: -5rem;
+  // margin-bottom: -5rem;\
+  // translate: -50 50 30 30;
+  // background-color: white;
+  z-index: 100;
+}
+
+mat-form-field input mat-datepicker{
+  background-color: white;
+}
+
+.availability_search_form button{
+  height: 2rem
+}
+
 .example-card {
     max-width: 650px;
     margin:2rem
@@ -13,9 +53,31 @@
     padding: 3rem;
     justify-content: center;
     flex-wrap: wrap;
+    background-color: aliceblue;
+    // border: 2px solid red;
+    margin-top: -5rem;
+   
   }
 
   mat-card-content .description{
     display:flex;
     justify-content: center;
+  }
+
+  button{
+    padding: 1.3rem 1rem;
+    font-size: 1rem
+  }
+
+  mat-card{
+    transition:.1s linear
+  }
+
+  mat-card:hover{
+    transform: scale(1.01)
+    
+  }
+
+  mat-card-title{
+    font-family: 'Sarabun', sans-serif !important;
   }

@@ -18,12 +18,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { SearchResultsComponent } from './search-results/search-results.component';
 import { BookingConfirmationComponent } from './booking-confirmation/booking-confirmation.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner'; 
 import {MatTableModule} from '@angular/material/table';
 import {MatIconModule} from '@angular/material/icon';
 import { FooterComponent } from './footer/footer.component';
 import { BillingComponent } from './billing/billing.component';
+import { SearchResultsRoomtypeComponent } from './search-results-roomtype/search-results-roomtype.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { BillingComponent } from './billing/billing.component';
     SearchResultsComponent,
     BookingConfirmationComponent,
     FooterComponent,
-    BillingComponent
+    BillingComponent,
+    SearchResultsRoomtypeComponent
   ],
   imports: [
     BrowserModule,
@@ -61,10 +63,11 @@ import { BillingComponent } from './billing/billing.component';
     MatIconModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+  
 
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
