@@ -1,10 +1,11 @@
+<div class="booking_bg"></div>
 <div class="booking_confirmation">
     <h1>Booking Confirmation</h1>
     <h2>Booking Details</h2>
     <h3>Check-in: {{checkInDate}}</h3>
     <h3>Check-out: {{checkOutDate}}</h3>
     <h2>Price Breakdown</h2>
-    <table>
+    <table class="booking_table">
         <tr>
           <!-- <th>Quantity</th> -->
           <th>Room</th>
@@ -23,8 +24,9 @@
     </table> 
 
 
-        <form [formGroup]="form" (ngSubmit)="onContinue()">
-    <mat-card  class="form-container">
+        <form [formGroup]="form" (ngSubmit)="onContinue()" class="booking_form">
+    <!-- <mat-card  class="form-container"> -->
+        <div class="form-container">
         <h2>Your Information</h2>
         <mat-form-field >
             <mat-label>Guest Name</mat-label>
@@ -62,7 +64,8 @@
     <button  mat-raised-button color="primary" (click)="onContinue()"> Checkout </button>
     <button  mat-raised-button color="accent" type="button"> Cancel </button>
 </div>
-</mat-card>
+</div>
+<!-- </mat-card> -->
 </form>
 </div>
 <!-- <mat-spinner *ngIf="isLoading"></mat-spinner> -->

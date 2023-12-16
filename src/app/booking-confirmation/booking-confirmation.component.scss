@@ -1,21 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@500&display=swap');
 
 * {
-    // margin: 0;
     font-family: 'Ibarra Real Nova', serif !important;
 }
 
+
 .booking_confirmation{
     padding:4rem;
-    display: flex;
-    flex-direction: column;
-    // align-items: center;
-    justify-content: center;
-    background-color: #F4EBD0;
-    background-color: #809FB0;
-    background-color: #F1F0E0;
-    background-color: #E0D7C7;
-    background-color: #DBDAC5;
+    width:50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+
+
+}
+
+.booking_bg{
+    height:100vh;
+    background-image: url('../../assets/images/hero.jpeg');
+    background-size: cover;
+    -webkit-filter: blur(4px);
+
 }
 
 h1{
@@ -39,11 +46,9 @@ h2{
     display:flex;
     flex-direction: column;
     border: none;
-}
-
-form{
-    width: 50%;
-    // margin:auto
+    background-color: rgba(219, 228, 241, 0.274);
+    padding:1rem;
+    border-radius: .8rem;
 }
 
 .actions button{
@@ -53,16 +58,20 @@ form{
 tr,th,td{
     padding:.5rem
 }
+th{
+    background-color: #284d79;
+    color: white;
+}
 
 table{
-    width:50%;
+    width:100%;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    background-color: #ffffff;
+    background-color:rgba(255, 255, 255, 0.466);
 }
 
 table, th, td {
-    border: 1px solid black;
+    border: 1px solid rgb(255, 255, 255);
     border-collapse: collapse;
   }
 
